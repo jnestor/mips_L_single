@@ -14,7 +14,7 @@
 
 module maindec (
 	input mips_decls_p::opcode_t opcode,
-	output logic memtoreg, memwrite, branch, branchne, alusrc, regdst, regwrite, jump,
+	output logic memtoreg, memwrite, branch, alusrc, regdst, regwrite, jump,
 	output logic [1:0] aluop
 	);
 
@@ -28,7 +28,6 @@ module maindec (
 				regdst = 1'b1;
 				alusrc = 1'b0;
 				branch = 1'b0;
-				branchne = 1'b0;
 				memwrite = 1'b0;
 				memtoreg = 1'b0;
 				jump = 1'b0;
@@ -39,7 +38,6 @@ module maindec (
 				regdst = 1'b0;
 				alusrc = 2'b1;
 				branch = 1'b0;
-				branchne = 1'b0;
 				memwrite = 1'b0;
 				memtoreg = 1'b1;
 				jump = 1'b0;
@@ -50,7 +48,6 @@ module maindec (
 				regdst = 1'b0;
 				alusrc = 1'b1;
 				branch = 1'b0;
-				branchne = 1'b0;
 				memwrite = 1'b1;
 				memtoreg = 1'b0;
 				jump = 1'b0;
@@ -61,7 +58,6 @@ module maindec (
 				regdst = 1'b0;
 				alusrc = 1'b0;
 				branch = 1'b1;
-				branchne = 1'b0;
 				memwrite = 1'b0;
 				memtoreg = 1'b0;
 				jump = 1'b0;
@@ -72,7 +68,6 @@ module maindec (
 				regdst = 1'b0;
 				alusrc = 1'b1;
 				branch = 1'b0;
-				branchne = 1'b0;
 				memwrite = 1'b0;
 				memtoreg = 1'b0;
 				jump = 1'b0;
@@ -83,7 +78,6 @@ module maindec (
 				regdst = 1'b0;
 				alusrc = 1'b0;
 				branch = 1'b0;
-				branchne = 1'b0;
 				memwrite = 1'b0;
 				memtoreg = 1'b0;
 				jump = 1'b1;
@@ -94,7 +88,6 @@ module maindec (
 				regdst = 1'bx;
 				alusrc = 1'bx;
 				branch = 1'bx;
-				branchne = 1'bx;
 				memwrite = 1'bx;
 				memtoreg = 1'bx;
 				jump = 1'bx;

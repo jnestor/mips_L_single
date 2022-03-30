@@ -25,10 +25,10 @@ module controller(
     );
 
     logic [1:0] aluop;
-    logic       branch, branchne;
+    logic       branch;
 
-    maindec U_MD(.opcode, .memtoreg, .memwrite, .branch, .branchne,
-    .alusrc, .regdst, .regwrite, .jump, .aluop);
+    maindec U_MD(.opcode, .memtoreg, .memwrite, .branch,
+                 .alusrc, .regdst, .regwrite, .jump, .aluop);
 
     aludec  U_AD(.funct, .aluop, .alucontrol);
 
